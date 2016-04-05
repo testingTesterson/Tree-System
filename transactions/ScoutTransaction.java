@@ -1,8 +1,8 @@
 package transactions;
 
-import application.Scout;
 import impresario.IView;
 import javafx.scene.Scene;
+import model.Scout;
 
 public class ScoutTransaction extends Transaction {
 

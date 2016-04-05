@@ -2,9 +2,9 @@ package transactions;
 
 import java.util.Properties;
 
-import application.Scout;
 import impresario.IView;
 import javafx.scene.Scene;
+import model.Scout;
 
 public class AddScoutTransaction extends Transaction {
 
