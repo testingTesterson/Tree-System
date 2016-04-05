@@ -11,10 +11,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import transactions.Transaction;
 import transactions.TransactionFactory;
-import userinterface.LanguageSelectionView;
 import userinterface.TreeLotCoordinatorView;
 import userinterface.View;
 import userinterface.ViewFactory;
+import userinterface.WelcomeView;
 import userinterface.WindowPosition;
 
 /**
@@ -51,8 +51,8 @@ public class TreeLotCoordinator implements IView, IModel {
 		}
 
 		setDependencies();
-		//createAndShowLanguageSelectionView();
-		createAndShowTreeLotCoordinatorView(); //This is just for testing
+		createAndShowWelcomeView();
+		//createAndShowTreeLotCoordinatorView(); //This is just for testing
 	}
 
 	// -----------------------------------------------------------------------------------
@@ -136,16 +136,16 @@ public class TreeLotCoordinator implements IView, IModel {
 	///////////////////////////////////////////////////////////////////////////////
 	// POSSIBLY CHANGE THIS
 	// -----------------------------------------------------------------------------
-	private void createAndShowLanguageSelectionView() {
-		Scene currentScene = (Scene) myViews.get("LanguageSelectionView");
+	private void createAndShowWelcomeView() {
+		Scene currentScene = (Scene) myViews.get("WelcomeView");
 
 		if (currentScene == null) {
 			// View newView = ViewFactory.createView("TreeLotCoordinatorView",
 			// this);
-			View newView = new LanguageSelectionView(this); // Replace this when
+			View newView = new WelcomeView(this); // Replace this when
 															// we have a factory
 			currentScene = new Scene(newView);
-			myViews.put("LanguageSelectionView", currentScene);
+			myViews.put("WelcomeView", currentScene);
 		}
 		swapToView(currentScene);
 	}
